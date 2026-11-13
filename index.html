@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discord.gg/EHZTXduFm2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://media.discordapp.net/attachments/1562934150263078965/1570192439732338840/d8ad381bb571d1321b4ce90ef3cdf5c7.png?ex=6af6332a&is=6af4e1aa&hm=1594c28e75ea8c586d0e01bc163c0ed73550f3a8feca3c14c22a75af44757de4&=&format=webp&quality=lossless') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #030303;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 750px; 
+            height: auto;
+            border: 2px solid #000000; 
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgb(4, 0, 255); 
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #0400f5; 
+            text-shadow: 0px 0px 8px #004ff8, 0px 0px 15px #000000, 0px 0px 25px #000000; 
+            letter-spacing: 4.5px; 
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 3em; 
+            color: #1100ff; 
+            text-shadow: 0px 0px 8px #000000, 0px 0px 15px #000000, 0px 0px 25px #000000; 
+            letter-spacing: 4.5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1562934150263078965/1570192560058540223/69bf2ec7af7957762272ee159ece1b26.png?ex=6af63347&is=6af4e1c7&hm=385d492517b6a1d212e47c0736fc6992ad9231522accce385ad07633b5d95cce&=&format=webp&quality=lossless" alt="Discord Image">
+    </div>
+    <audio autoplay loop>
+        <source src="c:\Users\SHAHROR PC\Downloads\aa.mp3.mov" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+     <div class="text"> welcome to almsl7en  </div>
+    <div class="info" id="ip-info">
+        <strong>IP: <span id="ip"></span></strong><br>
+        <span><strong>City:</strong> <span id="city"></span></span><br>
+        <span><strong>Region:</strong> <span id="region"></span></span><br>
+        <span><strong>Country:</strong> <span id="country"></span></span><br>
+        <span><strong>Location:</strong> <span id="loc"></span></span><br>
+        <span><strong>Organization:</strong> <span id="org"></span></span><br>
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+    </div>
+    <div class="text"> :
+         المسلحين : https://discord.gg/lm7</div>
+
+    <script>
+         fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            delete data.readme;
+            const infoDiv = document.getElementById('ip-info');
+            infoDiv.textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
